@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,4 +57,18 @@ public class MessageService {
 
         return new MessageReadDto().createMessageReadDto(message);
     }
+
+    public boolean validateAuthority(Long message_id, Account requestAccount) {
+        Message message = messageRepository.findById(message_id);
+
+        Account sender = message.getSender();
+        Account receiver = message.getReceiver();
+
+        if(requestAccount.equals(sender) || requestAccount.equals(receiver)) {
+            return true;
+        }
+
+        return false;
+    }
+
 }

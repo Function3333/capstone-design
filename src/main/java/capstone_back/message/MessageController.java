@@ -30,9 +30,15 @@ public class MessageController {
     }
 
     @GetMapping("/message")
-    public Response readMessage(@RequestParam Long message_id) {
-        MessageReadDto message = messageService.getMessage(message_id);
-        return new Response("success", message);
+    public Response readMessage(@RequestParam Long message_id, HttpServletRequest request) {
+        Account requestAccount = jwtService.headerToAccount(request);
+
+        if(messageService.validateAuthority(message_id, requestAccount)) {
+            MessageReadDto message = messageService.getMessage(message_id);
+            return new Response("success", message);
+        }
+
+        return new Response("fail", "only receiver and sender can read message");
     }
 
     @PostMapping("/message")

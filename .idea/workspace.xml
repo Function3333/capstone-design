@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a769710b-a62c-4363-9c29-30b450c83d95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/login/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/capstone_back/serviceTest/AccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController$ResponseData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController$ResponseData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/dto/LoginDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/dto/LoginDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/capstone_back/serviceTest/ServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/LoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/capstone_back/serviceTest/ServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/dto/MessageReadDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/dto/MessageReadDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/interceptor/Webconfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/interceptor/Webconfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageController$Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageController$Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/MessageReadDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/MessageReadDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/interceptor/Webconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/interceptor/Webconfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -8,13 +8,13 @@ public class MessageReadDto {
     private Long message_id;
     private String title;
     private String content;
-    private Long sender;
+    private String sender;
 
     public MessageReadDto createMessageReadDto(Message message) {
         this.message_id = message.getId();
         this.title = message.getTitle();
         this.content = message.getContent();
-        this.sender = message.getSender().getId();
+        this.sender = message.getSender().getEmail();
         return this;
     }
 }
