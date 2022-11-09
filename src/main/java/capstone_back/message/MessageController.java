@@ -47,7 +47,6 @@ public class MessageController {
         Account receiver = accountService.findByEmail(messageDto.getReceiver());
 
         messageService.sendMessage(sender, receiver, message);
-        log.info(messageDto.toString());
         return new Response("success", messageDto);
     }
 

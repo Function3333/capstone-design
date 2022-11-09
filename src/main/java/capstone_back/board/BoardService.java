@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
@@ -20,10 +22,8 @@ public class BoardService {
 
     @Transactional
     public Long join(BoardDto boardDto, String email) {
-        Board board = new Board().createBoard(boardDto);
+        Board board = new Board().createBoard(boardDto, new CurrentTime().currentTimeToTimeStamp(), "ture");
 
-        board.setCreated_at(new CurrentTime().currentTimeToTimeStamp());
-        board.setStatus("true");
         Account account = accountService.findByEmail(email);
         board.setAccount(account);
 
@@ -42,11 +42,9 @@ public class BoardService {
     public List<BoardDto> findByCategory_id(Long category_id) {
         List<Board> categoryList = boardRepository.findByCategory_id(category_id);
 
-        List<BoardDto> boardDtoList = new ArrayList<>();
-        for(Board board : categoryList) {
-            BoardDto boardDto = new BoardDto().boardToDto(board);
-            boardDtoList.add(boardDto);
-        }
+        Stream<Board> boardStream = categoryList.stream();
+        List<BoardDto> boardDtoList = boardStream.map(board -> new BoardDto().boardToDto(board)).collect(Collectors.toList());
+
         return boardDtoList;
     }
 
@@ -56,13 +54,10 @@ public class BoardService {
     }
 
     public List<BoardDto> findAll() {
-        List<Board> all = boardRepository.findAll();
+        List<Board> boardList = boardRepository.findAll();
 
-        List<BoardDto> boardDtoList = new ArrayList<>();
-        for(Board board : all) {
-            BoardDto boardDto = new BoardDto().boardToDto(board);
-            boardDtoList.add(boardDto);
-        }
+        Stream<Board> boardStream = boardList.stream();
+        List<BoardDto> boardDtoList = boardStream.map(board -> new BoardDto().boardToDto(board)).collect(Collectors.toList());
         return boardDtoList;
     }
 }

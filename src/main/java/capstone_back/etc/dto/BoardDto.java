@@ -17,6 +17,7 @@ public class BoardDto {
     private Long category_id;
     private String status;
     private Long user_id;
+    private String email;
 
 
     public BoardDto boardToDto(Board board) {
@@ -29,7 +30,7 @@ public class BoardDto {
         this.category_id = board.getCategory_id();
         this.status = board.getStatus();
         this.user_id = board.getAccount().getId();
-
+        this.email = board.getAccount().getEmail();
         return this;
     }
 }

@@ -5,9 +5,6 @@ import capstone_back.comment.Comment;
 import capstone_back.etc.dto.RegisterDto;
 import capstone_back.mention.Mention;
 import capstone_back.message.Message;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
