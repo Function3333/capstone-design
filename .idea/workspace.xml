@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a769710b-a62c-4363-9c29-30b450c83d95" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/login/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/capstone_back/serviceTest/AccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController$ResponseData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController$ResponseData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/dto/LoginDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/dto/LoginDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/board/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/BoardDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/MessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/MessageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/capstone_back/serviceTest/ServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/LoginDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/capstone_back/serviceTest/ServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,17 +71,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.findByEmailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="capstone_back.etc.*" />
+          <option name="PATTERN" value="capstone_back.serviceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="capstone_back" />
-      <option name="MAIN_CLASS_NAME" value="capstone_back.DemoApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="capstone_back.serviceTest" />
+      <option name="MAIN_CLASS_NAME" value="capstone_back.serviceTest.AccountTest" />
+      <option name="METHOD_NAME" value="findByEmailTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,10 +138,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="JUnit.AccountTest.findByEmailTest" />
         <item itemvalue="JUnit.ServiceTest.timeTest" />
         <item itemvalue="JUnit.RepositoryTest.nullTest" />
         <item itemvalue="JUnit.RepositoryTest.findByReceiverId" />
-        <item itemvalue="JUnit.DemoApplicationTests" />
       </list>
     </recent_temporary>
   </component>

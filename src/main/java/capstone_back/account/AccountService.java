@@ -39,17 +39,6 @@ public class AccountService {
         return account;
     }
 
-
-    public String login(LoginDto loginDto) {
-        List<Account> list = accountRepository.findByEmail(loginDto.getEmail());
-        if(list.isEmpty()) return null;
-
-        Account account = list.get(0);
-        if(!account.getPassword().equals(loginDto.getPassword())) return null;
-
-        return account.getEmail();
-    }
-
     public boolean findEmailIsDuplicate(String email) {
         try {
             findByEmail(email);

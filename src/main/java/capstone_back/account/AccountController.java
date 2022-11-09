@@ -3,6 +3,8 @@ package capstone_back.account;
 import capstone_back.etc.dto.LoginDto;
 import capstone_back.etc.dto.RegisterDto;
 import capstone_back.etc.jwt.JwtService;
+import capstone_back.login.LoginService;
+import capstone_back.message.MessageController;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1")
 public class AccountController {
     private final AccountService accountService;
+    private final LoginService loginService;
     private final JwtService jwtService;
 
     /*회원가입*/
@@ -23,8 +26,12 @@ public class AccountController {
         boolean isEmailDuplicate = accountService.findEmailIsDuplicate(registerDto.getEmail());
         boolean isUsernameDuplicate = accountService.findUsernameIsDuplicate(registerDto.getUsername());
 
-        if (isEmailDuplicate || isUsernameDuplicate) {
-            return new ResponseData("fail", "duplicateEmail or duplicateUsername");
+        if(isEmailDuplicate) {
+            return new ResponseData("fail", "duplicate email");
+        }
+
+        if(isUsernameDuplicate) {
+            return new ResponseData("fail", "duplicate username");
         }
 
         Account account = new Account().dtoToAccount(registerDto);
@@ -33,17 +40,13 @@ public class AccountController {
         return new ResponseData("success", id);
     }
 
-    /*로그인*/
     @PostMapping("/user/login")
     public ResponseData login(@RequestBody LoginDto loginDto) {
-        String loginEmail = accountService.login(loginDto);
-
-        if (loginEmail != null) {
-            String accessToken = jwtService.createAccessToken(loginEmail);
-            return new ResponseData("success", accessToken);
+        if(loginService.login(loginDto)) {
+            return new ResponseData("success", jwtService.createAccessToken(loginDto.getEmail()));
         }
 
-        return new ResponseData("fail", "");
+        return new ResponseData("fail", "invalid email or password");
     }
 
     @Data
