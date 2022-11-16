@@ -27,7 +27,7 @@ public class BoardController {
 
     @GetMapping("/boards/category")
     public Response boardList(@RequestParam Long category_id) throws JsonProcessingException {
-        List<BoardDto> byCategory_id = boardService.findByCategory_id(category_id);
+        List<BoardDto> byCategory_id = boardService.findByCategoryId(category_id);
         return new Response("success", byCategory_id);
     }
 
@@ -42,6 +42,11 @@ public class BoardController {
         Board board =  boardService.findById(board_id);
         BoardDto boardDto = new BoardDto().boardToDto(board);
         return new Response("success", boardDto);
+    }
+
+    @GetMapping("/board/user")
+    public Response userBoard(@RequestParam Long user_id) {
+
     }
 
     @PostMapping("/board/add")
@@ -61,7 +66,6 @@ public class BoardController {
 
     @PostMapping("/board/delete")
     public Response boardDelete(@RequestParam Long board_id, HttpServletRequest request) {
-
         try {
             String email = jwtService.getEmail(request);
             Account loginAccount = accountService.findByEmail(email);

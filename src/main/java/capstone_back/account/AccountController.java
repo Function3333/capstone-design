@@ -11,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Slf4j
 @RestController
 @RequiredArgsConstructor
@@ -34,8 +36,7 @@ public class AccountController {
             return new ResponseData("fail", "duplicate username");
         }
 
-        Account account = new Account().dtoToAccount(registerDto);
-        Long id = accountService.join(account);
+        Long id = accountService.join(registerDto);
 
         return new ResponseData("success", id);
     }
@@ -47,6 +48,20 @@ public class AccountController {
         }
 
         return new ResponseData("fail", "invalid email or password");
+    }
+
+    //이미 만료되어 헤더에 토큰이 없는 경우 fail
+    @GetMapping("/user/refresh")
+    public ResponseData refreshToken(HttpServletRequest request) {
+        String email;
+        try {
+            email = jwtService.getEmail(request);
+        } catch (IllegalArgumentException e) {
+            return new ResponseData("fail", "no token in header");
+        }
+
+        String refreshToken = jwtService.refreshToken(email);
+        return new ResponseData("success", refreshToken);
     }
 
     @Data

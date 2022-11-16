@@ -39,8 +39,8 @@ public class BoardService {
         return boardRepository.findById(id);
     }
 
-    public List<BoardDto> findByCategory_id(Long category_id) {
-        List<Board> categoryList = boardRepository.findByCategory_id(category_id);
+    public List<BoardDto> findByCategoryId(Long category_id) {
+        List<Board> categoryList = boardRepository.findByCategoryId(category_id);
 
         Stream<Board> boardStream = categoryList.stream();
         List<BoardDto> boardDtoList = boardStream.map(board -> new BoardDto().boardToDto(board)).collect(Collectors.toList());

@@ -3,7 +3,7 @@ package capstone_back.etc.dto;
 import lombok.Data;
 
 @Data
-public class MessageDto {
+public class CreateMessageDto {
     private Long id;
     private String title;
     private String content;

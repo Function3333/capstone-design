@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import java.util.List;
 
 @Configuration
-public class Webconfig implements WebMvcConfigurer {
+public class WebConfig implements WebMvcConfigurer {
     private List<String> paths = List.of("/api/v1/board/add", "/api/v1/board/delete", "/api/v1/board/messages", "/api/v1/board/message");
 
     @Override
@@ -16,4 +16,6 @@ public class Webconfig implements WebMvcConfigurer {
                 .order(1)
                 .addPathPatterns(paths);
     }
+
+
 }

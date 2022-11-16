@@ -30,9 +30,15 @@ public class BoardRepository {
     }
 
     /*카테고리 Id로 찾아오기*/
-    public List<Board> findByCategory_id(Long category_id) {
+    public List<Board> findByCategoryId(Long category_id) {
         return em.createQuery("select b from Board b where b.category_id =: category_id")
                 .setParameter("category_id", category_id)
+                .getResultList();
+    }
+    
+    public List<Board> findByUserId(Long user_id) {
+        return em.createQuery("select b  from Board b where b.account.id =: user_id")
+                .setParameter("user_id", user_id)
                 .getResultList();
     }
 

@@ -3,9 +3,6 @@ package capstone_back.board;
 import capstone_back.account.Account;
 import capstone_back.comment.Comment;
 import capstone_back.etc.dto.BoardDto;
-import capstone_back.etc.timeStamp.CurrentTime;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -2,8 +2,8 @@ package capstone_back.message;
 
 import capstone_back.account.Account;
 import capstone_back.account.AccountService;
-import capstone_back.etc.dto.MessageDto;
-import capstone_back.etc.dto.MessageReadDto;
+import capstone_back.etc.dto.CreateMessageDto;
+import capstone_back.etc.dto.MessageReturnDto;
 import capstone_back.etc.jwt.JwtService;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +25,7 @@ public class MessageController {
     @GetMapping("/messages")
     public Response readMessages(HttpServletRequest request) {
         String email = jwtService.getEmail(request);
-        List<MessageReadDto> messages = messageService.getMessages(email);
+        List<MessageReturnDto> messages = messageService.getMessages(email);
         return new Response("success", messages);
     }
 
@@ -34,7 +34,7 @@ public class MessageController {
         Account requestAccount = jwtService.headerToAccount(request);
 
         if(messageService.validateAuthority(message_id, requestAccount)) {
-            MessageReadDto message = messageService.getMessage(message_id);
+            MessageReturnDto message = messageService.getMessage(message_id);
             return new Response("success", message);
         }
 
@@ -42,7 +42,7 @@ public class MessageController {
     }
 
     @PostMapping("/message")
-    public Response createMessage(@RequestBody MessageDto messageDto, HttpServletRequest request) {
+    public Response createMessage(@RequestBody CreateMessageDto messageDto, HttpServletRequest request) {
         if(messageService.checkReceiverIsNull(messageDto.getReceiver())) {
             return new Response("fail", "receiver is null");
         }

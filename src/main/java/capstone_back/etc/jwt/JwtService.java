@@ -32,6 +32,10 @@ public class JwtService {
         return true;
     }
 
+    public void expireToken(String email) {
+        jwtManager.generateRefreshToken(email);
+    }
+
     public boolean checkHeaderExist(HttpServletRequest request) {
         String token = request.getHeader("AUTHORIZATION");
         if(token == null) return false;
@@ -57,4 +61,9 @@ public class JwtService {
         return account;
     }
 
+    public String refreshToken(String email) {
+        String refreshToken = jwtManager.generateRefreshToken(email);
+
+        return refreshToken;
+    }
 }

@@ -20,7 +20,7 @@ public class JwtManager {
     //30분
     private long ACCESS_TOKEN_VALIDATiON_SECOND = 60 * 30;
     //3시간
-    private long REFRESH_TOKEN_VALIDATiON_SECOND = 60 * 30 * 6;
+    private long REFRESH_TOKEN_VALIDATiON_SECOND = 60 * 30 * 10;
 
     private String secretKey = SecretKeyConst.secretKey;
 

@@ -2,14 +2,13 @@ package capstone_back.message;
 
 import capstone_back.account.Account;
 import capstone_back.account.AccountRepository;
-import capstone_back.etc.dto.MessageReadDto;
+import capstone_back.etc.dto.MessageReturnDto;
 import capstone_back.etc.jwt.JwtService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,24 +37,25 @@ public class MessageService {
         return false;
     }
 
-    public List<MessageReadDto> getMessages(String email) {
+    public List<MessageReturnDto> getMessages(String email) {
         List<Account> byEmail = accountRepository.findByEmail(email);
         Account account = byEmail.get(0);
 
         List<Message> byReceiverId = messageRepository.findByReceiverId(account.getId());
-        List<MessageReadDto> messageList = new ArrayList<>();
+        List<MessageReturnDto> messageList = new ArrayList<>();
+
         for (Message message : byReceiverId) {
-            MessageReadDto messageReadDto = new MessageReadDto().createMessageReadDto(message);
+            MessageReturnDto messageReadDto = new MessageReturnDto().createMessageReadDto(message);
             messageList.add(messageReadDto);
         }
 
         return messageList;
     }
 
-    public MessageReadDto getMessage(Long id) {
+    public MessageReturnDto getMessage(Long id) {
         Message message = messageRepository.findById(id);
 
-        return new MessageReadDto().createMessageReadDto(message);
+        return new MessageReturnDto().createMessageReadDto(message);
     }
 
     public boolean validateAuthority(Long message_id, Account requestAccount) {

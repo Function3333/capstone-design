@@ -1,6 +1,7 @@
 package capstone_back.account;
 
 import capstone_back.etc.dto.LoginDto;
+import capstone_back.etc.dto.RegisterDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -16,9 +17,10 @@ public class AccountService {
     private final AccountRepository accountRepository;
 
     @Transactional
-    public Long join(Account account) {
-        Long id = accountRepository.save(account);
-        return id;
+    public Long join(RegisterDto registerDto) {
+        Account account = new Account().dtoToAccount(registerDto);
+
+        return accountRepository.save(account);
     }
 
     /*
