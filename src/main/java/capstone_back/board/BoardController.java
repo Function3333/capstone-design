@@ -46,7 +46,9 @@ public class BoardController {
 
     @GetMapping("/board/user")
     public Response userBoard(@RequestParam Long user_id) {
+        List<BoardDto> boardDtoList = boardService.findByUserId(user_id);
 
+        return new Response("success" , boardDtoList);
     }
 
     @PostMapping("/board/add")

@@ -43,7 +43,7 @@ public class MessageController {
 
     @PostMapping("/message")
     public Response createMessage(@RequestBody CreateMessageDto messageDto, HttpServletRequest request) {
-        if(messageService.checkReceiverIsNull(messageDto.getReceiver())) {
+        if(messageService.validateReceiverIsNull(messageDto.getReceiver())) {
             return new Response("fail", "receiver is null");
         }
 
@@ -52,6 +52,10 @@ public class MessageController {
         Account sender = jwtService.headerToAccount(request);
         Account receiver = accountService.findByEmail(messageDto.getReceiver());
 
+        if(messageService.validateSendToMe(messageDto.getReceiver(), sender.getEmail())) {
+            return new Response("fail", "can't send message to me");
+        }
+        
         messageService.sendMessage(sender, receiver, message);
         return new Response("success", messageDto);
     }

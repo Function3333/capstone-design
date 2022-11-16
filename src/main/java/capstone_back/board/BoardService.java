@@ -60,4 +60,11 @@ public class BoardService {
         List<BoardDto> boardDtoList = boardStream.map(board -> new BoardDto().boardToDto(board)).collect(Collectors.toList());
         return boardDtoList;
     }
+
+    public List<BoardDto> findByUserId(Long userId) {
+        List<Board> byUserId = boardRepository.findByUserId(userId);
+        List<BoardDto> boardDtoList = byUserId.stream().map(board -> new BoardDto().boardToDto(board)).collect(Collectors.toList());
+
+        return boardDtoList;
+    }
 }

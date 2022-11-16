@@ -30,7 +30,7 @@ public class MessageService {
     }
 
     /*수신자 이메일이 존재하는지 확인*/
-    public boolean checkReceiverIsNull(String email) {
+    public boolean validateReceiverIsNull(String email) {
         List<Account> byEmail = accountRepository.findByEmail(email);
 
         if(byEmail.isEmpty()) return true;
@@ -68,6 +68,13 @@ public class MessageService {
             return true;
         }
 
+        return false;
+    }
+
+    public boolean validateSendToMe(String receiver, String userEmail) {
+        if(userEmail.equals(receiver)) {
+            return true;
+        }
         return false;
     }
 

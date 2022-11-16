@@ -5,35 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a769710b-a62c-4363-9c29-30b450c83d95" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController$ResponseData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController$ResponseData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/account/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/dto/MessageDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/dto/MessageReadDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/interceptor/Webconfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/interceptor/Webconfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/jwt/JwtManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/jwt/JwtManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/jwt/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/etc/jwt/JwtService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/message/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/account/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/board/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/board/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardController$Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardController$Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/capstone_back/board/BoardService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/board/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/board/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/board/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/board/BoardRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/board/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/board/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/MessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/CreateMessageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/MessageReadDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/dto/MessageReturnDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/interceptor/Webconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/interceptor/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/jwt/JwtManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/jwt/JwtManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/etc/jwt/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/etc/jwt/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/message/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/capstone_back/repositoryTest/RepositoryTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +36,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -63,16 +56,7 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
-  }
-}]]></component>
-  <component name="RunManager" selected="JUnit.BoardRepositoryTest">
+  <component name="RunManager" selected="Application.DemoApplication">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="capstone_back.DemoApplication" />
       <module name="demo.main" />
@@ -82,22 +66,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountTest.findByEmailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="capstone_back.serviceTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="capstone_back.serviceTest" />
-      <option name="MAIN_CLASS_NAME" value="capstone_back.serviceTest.AccountTest" />
-      <option name="METHOD_NAME" value="findByEmailTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,6 +81,37 @@
       <option name="PACKAGE_NAME" value="capstone_back.repositoryTest" />
       <option name="MAIN_CLASS_NAME" value="capstone_back.repositoryTest.BoardRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="capstone_back.serviceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="capstone_back.serviceTest" />
+      <option name="MAIN_CLASS_NAME" value="capstone_back.serviceTest.BoardServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardServiceTest.byUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="capstone_back.serviceTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="capstone_back.serviceTest" />
+      <option name="MAIN_CLASS_NAME" value="capstone_back.serviceTest.BoardServiceTest" />
+      <option name="METHOD_NAME" value="byUserId" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,29 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceTest.timeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="capstone_back.serviceTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="capstone_back.serviceTest" />
-      <option name="MAIN_CLASS_NAME" value="capstone_back.serviceTest.ServiceTest" />
-      <option name="METHOD_NAME" value="timeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BoardRepositoryTest" />
         <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="JUnit.BoardServiceTest.byUserId" />
+        <item itemvalue="JUnit.BoardServiceTest" />
+        <item itemvalue="JUnit.BoardRepositoryTest" />
         <item itemvalue="JUnit.JwtServiceTest.refreshTokenTest" />
-        <item itemvalue="JUnit.AccountTest.findByEmailTest" />
-        <item itemvalue="JUnit.ServiceTest.timeTest" />
       </list>
     </recent_temporary>
   </component>
