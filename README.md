@@ -4,9 +4,11 @@
   - [x] 토큰을 이용해 남의 메시지까지 건드릴수 있었던거 막아놓기
   - [x] 토큰 재발행 api/v1/user/refresh
   - [x] 유저별 전체 게시글 api/v1/board/user?user_id=*
+  - [x] 비밀번호 hash화
 
 ## 구현해야 할 내용
-  - [ ] 비밀번호 hash화
-  - [ ] message API - 기본 receiver , sender 가 email로 되어있는데 email을 알수가 없음 -> id값을 넣어도 동작하고, email 값을 넣어도 동작하도록 수정해 드리겠음.
   - [ ] 이미지 처리 어떻게 할것인지
   - [ ] 로그아웃 처리
+
+## api 정리
+https://www.postman.com/martian-eclipse-273139/workspace/capstone/collection/20079918-664427ef-0d27-48aa-b894-c71978b4125b?action=share&creator=20079918
