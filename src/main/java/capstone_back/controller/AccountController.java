@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1")
+@CrossOrigin(origins = "*")
 public class AccountController {
     private final AccountService accountService;
     private final LoginService loginService;

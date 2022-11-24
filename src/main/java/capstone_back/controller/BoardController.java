@@ -20,6 +20,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1")
+@CrossOrigin(origins = "*")
 public class BoardController {
     private final BoardService boardService;
     private final AccountService accountService;
