@@ -30,7 +30,14 @@ public class BoardRepository {
     }
 
     /*카테고리 Id로 찾아오기*/
-    public List<Board> findByCategoryId(Long category_id) {
+    public List<Board> findByTotalCategory(String category_id){
+        String strQueryCategory = category_id + "%";
+
+        return em.createQuery("select b from Board b where b.category_id like :strQueryCategory")
+                .setParameter("strQueryCategory", strQueryCategory)
+                .getResultList();
+    }
+    public List<Board> findByCategoryId(String category_id) {
         return em.createQuery("select b from Board b where b.category_id =: category_id")
                 .setParameter("category_id", category_id)
                 .getResultList();

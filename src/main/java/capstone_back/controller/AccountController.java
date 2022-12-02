@@ -9,21 +9,28 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseCookie;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "*")
 public class AccountController {
     private final AccountService accountService;
     private final LoginService loginService;
     private final JwtService jwtService;
 
-    /*회원가입*/
+    @RequestMapping(value="login")
+    public void setResponseHeader(HttpServletResponse response, Object Token)
+    {
+        response.setHeader("Set-Cookie", "access-token="+Token.toString());
+    }
+
     @PostMapping("/user/register")
     public ResponseData register(@RequestBody RegisterDto registerDto) throws JsonProcessingException {
         boolean isEmailDuplicate = accountService.findEmailIsDuplicate(registerDto.getEmail());
@@ -43,15 +50,16 @@ public class AccountController {
     }
 
     @PostMapping("/user/login")
-    public ResponseData login(@RequestBody LoginDto loginDto) {
+    public ResponseData login(@RequestBody LoginDto loginDto, HttpServletResponse response) {
         if(loginService.login(loginDto)) {
-            return new ResponseData("success", jwtService.createAccessToken(loginDto.getEmail()));
+            Object oToken = jwtService.createAccessToken(loginDto.getEmail());
+            setResponseHeader(response, oToken);
+            return new ResponseData("success", oToken);
         }
 
         return new ResponseData("fail", "invalid email or password");
     }
 
-    //이미 만료되어 헤더에 토큰이 없는 경우 fail
     @GetMapping("/user/refresh")
     public ResponseData refreshToken(HttpServletRequest request) {
         String email;
@@ -75,6 +83,4 @@ public class AccountController {
             this.data = data;
         }
     }
-
-
 }

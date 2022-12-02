@@ -4,7 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a769710b-a62c-4363-9c29-30b450c83d95" name="Changes" comment="" />
+    <list default="true" id="a769710b-a62c-4363-9c29-30b450c83d95" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/domain/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/repository/ImageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/service/ImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/BoardStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/BoardReturnForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/ImageReturnForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/interceptor/SimpleCorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/domain/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/domain/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/repository/BoardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/BoardDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/CreateMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/MessageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/MessageReturnDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/MessageReturnForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/dto/RegisterDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/utils/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/utils/interceptor/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/interceptor/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/capstone_back/utils/timeStamp/CurrentTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/capstone_back/utils/timeStamp/CurrentTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/capstone_back/serviceTest/AccountTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,10 +72,18 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2G1eG4MUqgLcOu1JzJwxLB1rLor" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  }
+}</component>
   <component name="RunManager" selected="Application.DemoApplication">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="capstone_back.DemoApplication" />
@@ -109,17 +144,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JwtServiceTest.refreshTokenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="capstone_back.serviceTest.*" />
+          <option name="PATTERN" value="capstone_back.controllerTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="capstone_back.serviceTest" />
-      <option name="MAIN_CLASS_NAME" value="capstone_back.serviceTest.JwtServiceTest" />
-      <option name="METHOD_NAME" value="refreshTokenTest" />
+      <option name="PACKAGE_NAME" value="capstone_back.controllerTest" />
+      <option name="MAIN_CLASS_NAME" value="capstone_back.controllerTest.ControllerTest" />
+      <option name="METHOD_NAME" value="register" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,10 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="JUnit.ControllerTest.register" />
         <item itemvalue="JUnit.BoardServiceTest.byUserId" />
         <item itemvalue="JUnit.BoardServiceTest" />
         <item itemvalue="JUnit.BoardRepositoryTest" />
-        <item itemvalue="JUnit.JwtServiceTest.refreshTokenTest" />
       </list>
     </recent_temporary>
   </component>
@@ -156,6 +191,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -11,6 +11,8 @@ public class Message {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String boardtitle;
+
     private String title;
     private String content;
 
@@ -32,9 +34,10 @@ public class Message {
         receiver.getReceiveMessageList().add(this);
     }
 
-    public Message createMessage(String title, String content) {
+    public Message createMessage(String title, String content, String boardtitle) {
         this.title = title;
         this.content = content;
+        this.boardtitle = boardtitle;
         return this;
     }
 

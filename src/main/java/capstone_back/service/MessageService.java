@@ -3,7 +3,7 @@ package capstone_back.service;
 import capstone_back.domain.Account;
 import capstone_back.domain.Message;
 import capstone_back.repository.AccountRepository;
-import capstone_back.utils.dto.MessageReturnDto;
+import capstone_back.utils.dto.MessageReturnForm;
 import capstone_back.jwt.JwtService;
 import capstone_back.repository.MessageRepository;
 import lombok.RequiredArgsConstructor;
@@ -39,26 +39,42 @@ public class MessageService {
         return false;
     }
 
-    public List<MessageReturnDto> getMessages(String email) {
+    public List<MessageReturnForm> getMessages(String email) {
         List<Account> byEmail = accountRepository.findByEmail(email);
         Account account = byEmail.get(0);
 
         List<Message> byReceiverId = messageRepository.findByReceiverId(account.getId());
-        List<MessageReturnDto> messageList = new ArrayList<>();
+        List<MessageReturnForm> messageList = new ArrayList<>();
 
         for (Message message : byReceiverId) {
-            MessageReturnDto messageReadDto = new MessageReturnDto().createMessageReadDto(message);
-            messageList.add(messageReadDto);
+            MessageReturnForm messageReturnDto = new MessageReturnForm().createMessageReadDto(message);
+            messageList.add(messageReturnDto);
         }
 
         return messageList;
     }
 
-    public MessageReturnDto getMessage(Long id) {
+    public List<MessageReturnForm> getSendMessages(String email) {
+        List<Account> byEmail = accountRepository.findByEmail(email);
+        Account account = byEmail.get(0);
+
+        List<Message> bySenderId = messageRepository.findBySenderId(account.getId());
+        List<MessageReturnForm> messageList = new ArrayList<>();
+
+        for(Message message : bySenderId) {
+            MessageReturnForm messageReturnDto = new MessageReturnForm().createMessageReadDto(message);
+            messageList.add(messageReturnDto);
+        }
+
+        return messageList;
+    }
+
+    public MessageReturnForm getMessage(Long id) {
         Message message = messageRepository.findById(id);
 
-        return new MessageReturnDto().createMessageReadDto(message);
+        return new MessageReturnForm().createMessageReadDto(message);
     }
+
 
     public boolean validateAuthority(Long message_id, Account requestAccount) {
         Message message = messageRepository.findById(message_id);

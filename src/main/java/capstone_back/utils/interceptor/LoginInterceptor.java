@@ -16,6 +16,10 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("LoginInterceptor Init");
 
+        if(request.getMethod().equals("OPTIONS")){
+            return true;
+        }
+
         String token = request.getHeader("AUTHORIZATION");
         if(token == null) {
             String errorJson = objectMapper.writeValueAsString(new Response("fail", "token required"));

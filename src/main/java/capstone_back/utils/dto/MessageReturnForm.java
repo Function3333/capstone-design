@@ -4,15 +4,17 @@ import capstone_back.domain.Message;
 import lombok.Data;
 
 @Data
-public class MessageReturnDto {
+public class MessageReturnForm {
     private Long message_id;
     private String title;
     private String content;
     private String sender;
+    private String board_title;
 
-    public MessageReturnDto createMessageReadDto(Message message) {
+    public MessageReturnForm createMessageReadDto(Message message) {
         this.message_id = message.getId();
         this.title = message.getTitle();
+        this.board_title = message.getBoardtitle();
         this.content = message.getContent();
         this.sender = message.getSender().getEmail();
         return this;
