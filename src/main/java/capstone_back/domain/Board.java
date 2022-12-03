@@ -28,7 +28,7 @@ public class Board {
     @OneToMany(mappedBy = "board", orphanRemoval = true)
     private List<Comment> commentList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "board")
+    @OneToMany(mappedBy = "board", orphanRemoval = true)
     private List<Image> imageList = new ArrayList<>();
 
     private String title;
